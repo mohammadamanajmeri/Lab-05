@@ -5,15 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "justMyCode": true
-        },
-        {
-            "name": "Random pokemon paste",
+            "name": "Random Pokemon Paste",
             "type": "python",
             "request": "launch",
             "program": "pokemon_paste.py",

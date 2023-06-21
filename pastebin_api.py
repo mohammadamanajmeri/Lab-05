@@ -33,12 +33,9 @@ def post_new_paste(title, body_text, expiration='N', listed=True):
     }
 
     # send the POST request
-    print('Sending POST request to PasteBin')
     resp_msg = requests.post(PASTEBIN_API_POST_URL, data=params)
-
     #Check whether the request was successful
     if resp_msg.status_code == requests.codes.ok:
-        print(f'New paste created: {resp_msg.text}')
         return resp_msg.text
     else:
         print(f'Request failed: {resp_msg.text}')
@@ -47,7 +44,7 @@ def post_new_paste(title, body_text, expiration='N', listed=True):
 
     return
 def main():
-    post_new_paste('Awesome paste', 'This paste is not useful. \ndelete whenever.', '1H', False)
+    post_new_paste('Awesome paste', 'This paste is not useful. \ndelete whenever.', '1M', False)
 
 if __name__ == '__main__':
     main()
